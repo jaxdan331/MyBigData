@@ -1,7 +1,16 @@
 # MyBigData
 大数据云计算期末作业
-首先运行目录下的Dockerfile，创建基础镜像centos-hadoop（之后的两个镜像都是基于这个镜像创建的）
+首先运行根目录下的Dockerfile，创建基础镜像centos-hadoop（之后的两个镜像都是基于这个镜像创建的）
+然后运行根目录下的create_network.sh脚本，创建Docker网络
 
 基于Hadoop的电影推荐系统
 运行hadoop目录下的Dockerfile，创建hadoop镜像，该镜像基于centos-hadoop，包含了ZooKeeper、HBase等框架
-创建好hadoop镜像后，执行hadoop目录下的start
+创建好hadoop镜像后，依次执行hadoop目录下的start_container.sh，start_zkp.sh脚本启动hadoop集群和ZooKeeper集群
+再进入hadoop-node1执行start-hbase.sh命令方可启动HBase
+接下来就可以运行程序了
+
+基于Spark的电影推荐系统
+运行spark目录下的Dockerfile，创建spark镜像，该镜像基于centos-hadoop，包含了Spark框架
+创建好spark镜像后，执行spark目录下的start_nodes.sh脚本创建spark集群
+再进入spark-node1执行start-all.sh命令启动Hadoop，执行/usr/local/spark/sbin/start-all.sh命令启动spark
+接下来就可以运行程序了
