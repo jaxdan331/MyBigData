@@ -1,0 +1,5 @@
+MvRecommend所做的电影推荐中间结果及输入输出均放在HDFS上
+writetohbase用于向HBase中上传数据集，上传前需要创建命名空间'movie'
+PrintHBase可以打印出HBase中标'movie:movieLens'中的内容，用于验证数据集上传成功
+MvRecommendWithHBase所做的电影推荐中间结果及输出结果也放在HDFS上，但是输入文件放在HBase中
+MvRecommendWithHBase和MvRecommend的区别在于读取输入文件的方式不同
