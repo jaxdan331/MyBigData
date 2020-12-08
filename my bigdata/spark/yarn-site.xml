@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property>
+    	<!--NodeManager运行的附属服务，需要配置为mapreduce_shuffle，才能运行MapReduce程序 -->
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+
+    <!-- 为spark的正常启动，必须添加如下两项 -->
+    <property>
+	    <name>yarn.nodemanager.pmem-check-enabled</name>
+	    <value>false</value>
+	</property>
+	<property>
+	    <name>yarn.nodemanager.vmem-check-enabled</name>
+	    <value>false</value>
+	</property>
+</configuration>
