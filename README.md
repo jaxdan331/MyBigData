@@ -14,3 +14,4 @@
 创建好spark镜像后，执行spark目录下的start_nodes.sh脚本创建spark集群
 再进入spark-node1执行start-all.sh命令启动Hadoop，执行/usr/local/spark/sbin/start-all.sh命令启动spark
 接下来就可以运行程序了
+但是使用Docker容器运行pyspark程序很可能会出现报错的情况，作者在实现Spark电影推荐系统时采用的是虚拟机方式
