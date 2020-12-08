@@ -1,0 +1,2 @@
+在单机模式和已经安装好Spark的虚拟机上可以直接运行这两个pyspark程序
+如果使用docker搭建Spark分布式系统
