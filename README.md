@@ -1,2 +1,7 @@
 # MyBigData
 大数据云计算期末作业
+首先运行目录下的Dockerfile，创建基础镜像centos-hadoop（之后的两个镜像都是基于这个镜像创建的）
+
+基于Hadoop的电影推荐系统
+运行hadoop目录下的Dockerfile，创建hadoop镜像，该镜像基于centos-hadoop，包含了ZooKeeper、HBase等框架
+创建好hadoop镜像后，执行hadoop目录下的start
